@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 import { saveUserWhenIsNot } from "./services/auth";
 import { NavBar } from "./components";
 import { useUser } from "./hooks";
+import { PostsPage } from "./pages";
 
 function App() {
   const { user } = useUser();
@@ -13,14 +14,12 @@ function App() {
   }, [user]);
 
   return (
-    <>
+    <Box bg="#ccc" h="100vh">
       <NavBar />
-      <Box mt="4rem">
-        <Text fontSize={50} fontFamily="quicksand" textAlign="center">
-          Campus Hub
-        </Text>
+      <Box pt="5rem" maxW="500px" mx="auto" px={{ base: 7, md: 0 }}>
+        <PostsPage />
       </Box>
-    </>
+    </Box>
   );
 }
 

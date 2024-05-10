@@ -34,6 +34,7 @@ export async function saveUserWhenIsNot(user: GoogleUser | null | undefined) {
     name: displayName,
   });
 }
+
 export const signInWithGoogle = () =>
   signInWithRedirect(googleAuth, new GoogleAuthProvider());
 
