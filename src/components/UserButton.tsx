@@ -47,10 +47,10 @@ const UserButton = () => {
           <Image
             borderRadius="full"
             cursor="pointer"
-            h={9}
+            h={7}
             objectFit="cover"
             src={user.photoURL || ""}
-            w={9}
+            w={7}
           />
         </MenuButton>
 

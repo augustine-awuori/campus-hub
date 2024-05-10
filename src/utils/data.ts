@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
-import { GrGroup, GrHome } from "react-icons/gr";
+import { GoHome } from "react-icons/go";
+import { GrGroup } from "react-icons/gr";
 
 export const fontFamily = "quicksand";
 
@@ -12,6 +13,6 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { href: "", label: "Home", Icon: GrGroup },
-  { href: "", label: "Users", Icon: GrHome },
+  { href: "", label: "Home", Icon: GoHome },
+  { href: "", label: "Users", Icon: GrGroup },
 ];

@@ -22,16 +22,16 @@ const DesktopNav = () => {
   return (
     <Stack direction="row" spacing={4}>
       {navItems.map(({ children, href, Icon, label }) => (
-        <Box key={label} position="relative">
+        <Box key={label} position="relative" px={5}>
           <Popover trigger="hover" placement="bottom-start">
             <PopoverTrigger>
               <Flex
-                p={2}
+                py={1.5}
                 cursor="pointer"
                 direction="column"
                 alignItems="center"
               >
-                <Icon />
+                <Icon size={15} />
                 <Box
                   onClick={() => navigate(href)}
                   fontFamily={fontFamily}
