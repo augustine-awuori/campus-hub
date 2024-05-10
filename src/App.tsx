@@ -1,16 +1,12 @@
 import { useEffect } from "react";
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import { useAuthState } from "react-firebase-hooks/auth";
 
-import {
-  googleAuth,
-  saveUserWhenIsNot,
-  signInWithGoogle,
-} from "./services/auth";
+import { saveUserWhenIsNot, signInWithGoogle } from "./services/auth";
 import { NavBar } from "./components";
+import { useUser } from "./hooks";
 
 function App() {
-  const [user] = useAuthState(googleAuth);
+  const { user } = useUser();
 
   useEffect(() => {
     saveUserWhenIsNot(user);
@@ -23,9 +19,11 @@ function App() {
         <Text fontSize={50} fontFamily="quicksand" textAlign="center">
           Campus Hub
         </Text>
-        <Button onClick={async () => await signInWithGoogle()}>
-          Google in
-        </Button>
+        {!user && (
+          <Button onClick={async () => await signInWithGoogle()}>
+            Google in
+          </Button>
+        )}
         {user && (
           <Flex>
             <Image

@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
-  signInWithRedirect,
-  User,
   GoogleAuthProvider,
+  signInWithRedirect,
+  signOut as googleSignOut,
+  User,
 } from "firebase/auth";
 
 import usersService from "./users";
@@ -35,3 +36,7 @@ export async function saveUserWhenIsNot(user: GoogleUser | null | undefined) {
 }
 export const signInWithGoogle = () =>
   signInWithRedirect(googleAuth, new GoogleAuthProvider());
+
+export const signOut = async () => await googleSignOut(googleAuth);
+
+export default { signOut, signInWithGoogle };
