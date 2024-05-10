@@ -11,13 +11,16 @@
     "start": "vite"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "apisauce": "^3.0.1",
     "firebase": "^10.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
-    "react-google-button": "^0.8.0"
+    "react-google-button": "^0.8.0",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

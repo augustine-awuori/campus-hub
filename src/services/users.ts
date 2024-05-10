@@ -10,4 +10,6 @@ export interface User {
 
 const create = (user: User) => client.post(endpoint, user);
 
-export default { create };
+const getAll = () => client.get(endpoint);
+
+export default { create, getAll };
