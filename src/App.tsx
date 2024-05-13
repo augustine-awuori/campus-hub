@@ -14,7 +14,7 @@ function App() {
   }, [user]);
 
   return (
-    <Box bg="#ccc" h="100vh">
+    <Box bg="#ccc" h="auto" pb={7}>
       <NavBar />
       <Box pt="5rem" maxW="500px" mx="auto" px={{ base: 7, md: 0 }}>
         <PostsPage />
