@@ -1,11 +1,10 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 
 import { Text } from "..";
-import c from "../../assets/pic.jpg";
-import { ImagesGrid } from ".";
+import avatar from "../../assets/pic.jpg";
+import EngagementPanel from "./EngagementPanel";
 
 const image = "https://picsum.photos/300/500";
-const reactions = ["😂", "😍", "😲", "🔥", "🙌", "😎", "😊", "😢", "🤔", "👎"];
 
 const index = () => {
   return (
@@ -13,7 +12,7 @@ const index = () => {
       <Flex align="center">
         <Image
           mr={2}
-          src={c}
+          src={avatar}
           w={8}
           h={8}
           objectFit="cover"
@@ -29,12 +28,25 @@ const index = () => {
         </Box>
       </Flex>
 
-      <Box>
-        <Text color="blue" mb={2}>
+      <Box mt={1}>
+        <Text color="gray.500" mb={2} fontSize={12}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere non,
           exercitationem dolore nisi sint inventore!
         </Text>
-        <ImagesGrid images={[image, image, image]} />
+        <Image
+          src={image}
+          alt="Image"
+          width="100%"
+          height={200}
+          objectFit="contain"
+          borderRadius={10}
+        />
+        <EngagementPanel
+          comments={5}
+          likes={1}
+          onComment={console.log}
+          onLike={console.log}
+        />
       </Box>
     </Box>
   );
