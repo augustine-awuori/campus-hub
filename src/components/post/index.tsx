@@ -2,7 +2,8 @@ import { Box, Flex, Image } from "@chakra-ui/react";
 
 import avatar from "../../assets/pic.jpg";
 import EngagementPanel from "./EngagementPanel";
-import Text from "./ReadMoreText";
+import ReadMoreText from "./ReadMoreText";
+import { Text } from "..";
 
 const image = "https://picsum.photos/300/500";
 
@@ -29,10 +30,10 @@ const index = () => {
       </Flex>
 
       <Box mt={1}>
-        <Text color="gray.500" mb={2} fontSize={12}>
+        <ReadMoreText color="gray.500" mb={2} fontSize={12}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere non,
           exercitationem dolore nisi sint inventore!
-        </Text>
+        </ReadMoreText>
         <Image
           src={image}
           alt="Image"

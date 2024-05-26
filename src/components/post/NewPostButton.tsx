@@ -26,6 +26,7 @@ const NewPostButton = ({ onClick }: Props) => {
           </Text>
         </Flex>
         <IconButton
+          _hover={{ bg: "blue.200" }}
           aria-label="new-post"
           icon={<BiPlus />}
           bg="blue"
