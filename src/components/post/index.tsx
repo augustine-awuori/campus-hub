@@ -1,8 +1,8 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 
-import { Text } from "..";
 import avatar from "../../assets/pic.jpg";
 import EngagementPanel from "./EngagementPanel";
+import Text from "./ReadMoreText";
 
 const image = "https://picsum.photos/300/500";
 
